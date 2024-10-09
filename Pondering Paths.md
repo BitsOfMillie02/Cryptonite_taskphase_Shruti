@@ -40,13 +40,13 @@ Learned how to cd into a directory.
 <br/>
 We have to specify a particular file, depending on where the terminal prompt is located. A relative path is any path that does not start at root and cwd is the directory that the prompt is currently located at.
 I first cd into the directiry / and then used a relative path not starting from / to invoke the challenge.
-## Section 6: Explcit relative paths, from/
+## Section 7: Explcit relative paths, from/
 `hacker@paths~explicit-relative-paths-from-:~$ cd /`
 <br/>
 `hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run`
 <br/>
 Every directory has two implicit entries '.' and '..'. '.' refers to the same directory.
-## Section 7: Implicit relative path
+## Section 8: Implicit relative path
 `hacker@paths~implicit-relative-path:~$ cd /challenge`
 <br/>
 `hacker@paths~implicit-relative-path:/challenge$ ./run`
