@@ -53,3 +53,15 @@ Every directory has two implicit entries '.' and '..'. '.' refers to the same di
 <br/>
 Linux explicitly avoids automatically looking in the current directory when provided with a "naked" path. This is a preventive measure to accidnetly exceute programs which has the same name.
 ## Section 8: Home sweet home
+`hacker@paths~home-sweet-home:~$ /challenge/run ./f`
+<br/>
+The argument you provided is not an absolute path!
+<br/>
+`hacker@paths~home-sweet-home:~$ /challenge/run ~/f`
+```
+Writing the file to /home/hacker/f!
+... and reading it back to you:
+pwn.college{wYebTUVT-F0QwdI1W9MBEWIKkE-.dNzM4QDL4EDO0czW}
+```
+~ is a shorthand for the current working directory. ~ provided in the start of an argument will expand it to the home directory
+<br/>
