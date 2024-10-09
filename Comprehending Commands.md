@@ -194,6 +194,6 @@ After looking into each one of them:
 `hacker@commands~finding-files:~$ cat /opt/linux/linux-5.4/arch/ia64/hp/common/flag`
 <br/>
 File command is used to search for the file taking arguments of location or serach criteria. If nothing is provided it looks through all the files.
-## Section 11: Linking Files
+## Section 12: Linking Files
 
 
