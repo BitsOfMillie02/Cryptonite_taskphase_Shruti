@@ -148,6 +148,7 @@ mkdir command is used to make a directory
 `hacker@commands~finding-files:~$ find / -name flag`
 <br/>
 Listed a list of files:
+```
 /home/hacker/flag
 find: ‘/tmp/tmp.MiOQGWw5Zc’: Permission denied
 find: ‘/etc/ssl/private’: Permission denied
@@ -188,12 +189,13 @@ find: ‘/proc/7/fdinfo’: Permission denied
 find: ‘/proc/7/ns’: Permission denied
 /nix/store/1yagn5s8sf7kcs2hkccgf8d0wxlrv5sz-radare2-5.9.0/share/radare2/5.9.0/flag
 /nix/store/pmvk2bk4p550w182rjfm529kfqddnvh3-python3.11-pwntools-4.12.0/lib/python3.11/site-packages/pwnlib/flag
-<br/>
+```
 After looking into each one of them:
 <br/>
 `hacker@commands~finding-files:~$ cat /opt/linux/linux-5.4/arch/ia64/hp/common/flag`
 <br/>
 File command is used to search for the file taking arguments of location or serach criteria. If nothing is provided it looks through all the files.
+<br/>
 ## Section 12: Linking Files
 
 
