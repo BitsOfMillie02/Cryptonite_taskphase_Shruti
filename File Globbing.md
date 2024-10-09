@@ -29,6 +29,10 @@ In this challenge, I accessed the file using the character b,a,s,h.
 I globbed using the path as globbing occurs through path.
 <br/>
 ## Section 5: Mixing Globs
+`hacker@globbing~mixing-globs:~$ cd /challenge/files`
+<br/>
+`hacker@globbing~mixing-globs:/challenge/files$ /challenge/run [cep]*`
+<br/>
 ## Section 6: Exclusionary Globbing
 `hacker@globbing~exclusionary-globbing:~$ cd /challenge/files`
 <br/>
