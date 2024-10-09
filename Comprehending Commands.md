@@ -17,3 +17,4 @@ Reading out the file without cding into the directory. The flag was hidden in a 
 <br/>
 The grep command has a function of searching  the file for lines of text containing the string to searched and print them to the console. The string to be searched in this case is 'pwn.college' and the path is /challenge/data.txt.
 ## Section 5:Listing Files
+`hacker@commands~listing-files:~$ cd /challenge`
