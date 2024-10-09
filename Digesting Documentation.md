@@ -7,6 +7,7 @@ To run the program passing an argument of '--giveflag' to /challenge/challenge
 ## Section 3: Reading Manuals
 `hacker@man~reading-manuals:~$ man challenge`
 <br/>
+
 ```
 CHALLENGE(1)                                      Challenge Commands                                     CHALLENGE(1)
 
@@ -37,10 +38,11 @@ REPORTING BUGS
 SEE ALSO
        man(1) bash-builtins(7)
 ```
- <br/>      
+       
 `hacker@man~reading-manuals:~$ /challenge/challenge --gfkjnf 587`
 <br/>
 man command stands for manula which will print the manual of the argument passed to it.
+
 ## Section 4: Searching Manuals
 `hacker@man~searching-manuals:~$ man challenge`
  <br/> 
@@ -74,7 +76,7 @@ The secret value is: 627
 `hacker@man~helpful-programs:/challenge$ ./challenge -g 627`
  <br/> 
  
- ## Help for Builtins
+ ## Section 7:Help for Builtins
 `hacker@man~help-for-builtins:~$ help challenge`
  <br/> 
 ```
