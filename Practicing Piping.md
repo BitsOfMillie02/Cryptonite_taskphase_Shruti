@@ -29,7 +29,7 @@ hacker@piping~redirecting-more-output:~$ cat myflag
 [FLAG] pwn.college{Uo98NGAqPe-D_waB9kuzNsJuV_8.dVjN1QDL4EDO0czW}
 ```
 ## Section 3: APPENDING OUTPUT
-<br/>
+
 `hacker@piping~appending-output:~$ /challenge/run >> /home/hacker/the-flag`
 <br/>
 ```
@@ -63,7 +63,7 @@ pwn.college{kgDG-k30G0-5fMIYVLDohf9eklC.ddDM5QDL4EDO0czW}
                               ^
      that is the second half /|\
 ```
-<br/>
+
 ## Section 4: Redirecting errors
 `hacker@piping~redirecting-errors:~$ /challenge/run > myflag 2> instructions`
 <br/>
@@ -73,7 +73,7 @@ pwn.college{kgDG-k30G0-5fMIYVLDohf9eklC.ddDM5QDL4EDO0czW}
 <br/>
 This challenge helps us understand how to redirect errors. It has file desciptors which are the numbered communication channel, O standing for input, 1 for output which is the default and 2 for standard error. 
 In this challenge i redirected using FD 2.
-<br/>
+
 ## Section 5: Redirecting Input
 `hacker@piping~redirecting-input:~$ echo COLLEGE > PWN`
 <br/>
@@ -84,7 +84,7 @@ Reading from standard input...
 Correct! You have redirected the PWN file into my standard input, and I read
 the value 'COLLEGE' out of it!
 ```
-<br/>
+
 ## Section 6: Grepping stored results
 `hacker@piping~grepping-stored-results:~$ /challenge/run > /tmp/data.txt`
 <br/>
@@ -113,7 +113,7 @@ the value 'COLLEGE' out of it!
 pwn.college{knsHTzSsFhZc49WcRH1bYMWt9oE.dhTM4QDL4EDO0czW}
 <br/>
 In this challenge, I redirected the output and grepped for the flag.
-<br/>
+
 ## Section 7: Grepping live output
 `hacker@piping~grepping-live-output:~$ /challenge/run | grep pwn.college`
 <br/>
@@ -140,7 +140,7 @@ pwn.college{8ee0eeYnIvAA-te6GXJal9mxstF.dlTM4QDL4EDO0czW}
 ```
 <br/>
 | which is the pipe operator is used to pipe into standard input to the right of the pipe from the standard output to the left of the pipe.
-<br/>
+
 ## Section 8 : Grepping Errors
 `hacker@piping~grepping-errors:~$ /challenge/run 2>&1 | grep pwn.college`
 <br/>
@@ -167,7 +167,7 @@ pwn.college{4a2FsGXEz80QvVtqsl73xmB78nd.dVDM5QDL4EDO0czW}
 ```
 <br/>
 >& operator redirects a file descriptor to another file descriptor. We need to convert standard error to standard output by using >& operator.
-><br/>
+
 ## Section 9: Duplicating piped data with tee
 `hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn | tee output | /challenge/college`
 <br/>
@@ -180,16 +180,15 @@ SECRET_ARG should be "8Quiakr6"
 ```
 <br/>
 `hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn --secret 8Quiakr6 | /challenge/college`
-<br/>
 ```
 Processing...
 Correct! Passing secret value to /challenge/college...
 Great job! Here is your flag:
 pwn.college{8Quiakr62IMHr2RCcBhhnw5xalp.dFjM5QDL4EDO0czW}
 ```
-<br/>
+
 The tee command duplicates data flowing through the pipes to any number of files provided on the command line. In this challenge i passed the secret argument generated to /challenge/pwn.
-<br/>
+
 ## Section 10: Writing to multiple programs
 `hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >( /challenge/the ) >( /challenge/planet )`
 <br/>
@@ -199,7 +198,7 @@ This secret data must directly and simultaneously make it to /challenge/the and
 454660661940418040
 Congratulations, you have duplicated data into the input of two programs!
 ```
-<br/>
+
 ## Section 11: Split - piping stderr and stdout
 `hacker@piping~split-piping-stderr-and-stdout:~$ /challenge/hack > >( /challenge/planet ) 2> >( /challenge/the )`
 <br/>
