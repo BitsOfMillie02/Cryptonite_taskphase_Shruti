@@ -53,44 +53,58 @@ rm command is used to remove or delete a particular file with the name of the fi
 ls command doesnt list the files which start with a '.'. Thus to list out all the files a command 'ls -a' is used to list files beginning with '.' as well.
 In the / directory I listed out all the files.
 ## Section 9:An epic filesystem Quest
-hacker@commands~an-epic-filesystem-quest:~$ cd /
-hacker@commands~an-epic-filesystem-quest:/$ ls -a
-.   .dockerenv  bin   challenge  etc   home  lib32  libx32  mnt  opt   root  sbin  sys  usr
-..  HINT        boot  dev        flag  lib   lib64  media   nix  proc  run   srv   tmp  var
+`hacker@commands~an-epic-filesystem-quest:~$ cd /`
+<br/>
+`hacker@commands~an-epic-filesystem-quest:/$ ls`
+```
+HINT  boot       dev  flag  lib    lib64   media  nix  proc  run   srv  tmp  var
+bin   challenge  etc  home  lib32  libx32  mnt    opt  root  sbin  sys  usr
 hacker@commands~an-epic-filesystem-quest:/$ cat HINT
 Tubular find!
 The next clue is in: /usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__
 
 The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.
-hacker@commands~an-epic-filesystem-quest:/$ cd /usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$ ls -a
-.                                      test_distance_regular.cpython-38.pyc         test_planarity.cpython-38.pyc
-..                                     test_dominance.cpython-38.pyc                test_polynomials.cpython-38.pyc
-SECRET                                 test_dominating.cpython-38.pyc               test_reciprocity.cpython-38.pyc
-__init__.cpython-38.pyc                test_efficiency.cpython-38.pyc               test_regular.cpython-38.pyc
-test_asteroidal.cpython-38.pyc         test_euler.cpython-38.pyc                    test_richclub.cpython-38.pyc
-test_boundary.cpython-38.pyc           test_graph_hashing.cpython-38.pyc            test_similarity.cpython-38.pyc
-test_bridges.cpython-38.pyc            test_graphical.cpython-38.pyc                test_simple_paths.cpython-38.pyc
-test_chains.cpython-38.pyc             test_hierarchy.cpython-38.pyc                test_smallworld.cpython-38.pyc
-test_chordal.cpython-38.pyc            test_hybrid.cpython-38.pyc                   test_smetric.cpython-38.pyc
-test_clique.cpython-38.pyc             test_isolate.cpython-38.pyc                  test_sparsifiers.cpython-38.pyc
-test_cluster.cpython-38.pyc            test_link_prediction.cpython-38.pyc          test_structuralholes.cpython-38.pyc
-test_communicability.cpython-38.pyc    test_lowest_common_ancestors.cpython-38.pyc  test_summarization.cpython-38.pyc
-test_core.cpython-38.pyc               test_matching.cpython-38.pyc                 test_swap.cpython-38.pyc
-test_covering.cpython-38.pyc           test_max_weight_clique.cpython-38.pyc        test_threshold.cpython-38.pyc
-test_cuts.cpython-38.pyc               test_mis.cpython-38.pyc                      test_tournament.cpython-38.pyc
-test_cycles.cpython-38.pyc             test_moral.cpython-38.pyc                    test_triads.cpython-38.pyc
-test_d_separation.cpython-38.pyc       test_node_classification.cpython-38.pyc      test_vitality.cpython-38.pyc
-test_dag.cpython-38.pyc                test_non_randomness.cpython-38.pyc           test_voronoi.cpython-38.pyc
-test_distance_measures.cpython-38.pyc  test_planar_drawing.cpython-38.pyc           test_wiener.cpython-38.pyc
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$cc
-at SECRET
+```
+`hacker@commands~an-epic-filesystem-quest:/$ cd /usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__`
+`hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$ ls`
+```
+SECRET                                 test_lowest_common_ancestors.cpython-38.pyc
+__init__.cpython-38.pyc                test_matching.cpython-38.pyc
+test_asteroidal.cpython-38.pyc         test_max_weight_clique.cpython-38.pyc
+test_boundary.cpython-38.pyc           test_mis.cpython-38.pyc
+test_bridges.cpython-38.pyc            test_moral.cpython-38.pyc
+test_chains.cpython-38.pyc             test_node_classification.cpython-38.pyc
+test_chordal.cpython-38.pyc            test_non_randomness.cpython-38.pyc
+test_clique.cpython-38.pyc             test_planar_drawing.cpython-38.pyc
+test_cluster.cpython-38.pyc            test_planarity.cpython-38.pyc
+test_communicability.cpython-38.pyc    test_polynomials.cpython-38.pyc
+test_core.cpython-38.pyc               test_reciprocity.cpython-38.pyc
+test_covering.cpython-38.pyc           test_regular.cpython-38.pyc
+test_cuts.cpython-38.pyc               test_richclub.cpython-38.pyc
+test_cycles.cpython-38.pyc             test_similarity.cpython-38.pyc
+test_d_separation.cpython-38.pyc       test_simple_paths.cpython-38.pyc
+test_dag.cpython-38.pyc                test_smallworld.cpython-38.pyc
+test_distance_measures.cpython-38.pyc  test_smetric.cpython-38.pyc
+test_distance_regular.cpython-38.pyc   test_sparsifiers.cpython-38.pyc
+test_dominance.cpython-38.pyc          test_structuralholes.cpython-38.pyc
+test_dominating.cpython-38.pyc         test_summarization.cpython-38.pyc
+test_efficiency.cpython-38.pyc         test_swap.cpython-38.pyc
+test_euler.cpython-38.pyc              test_threshold.cpython-38.pyc
+test_graph_hashing.cpython-38.pyc      test_tournament.cpython-38.pyc
+test_graphical.cpython-38.pyc          test_triads.cpython-38.pyc
+test_hierarchy.cpython-38.pyc          test_vitality.cpython-38.pyc
+test_hybrid.cpython-38.pyc             test_voronoi.cpython-38.pyc
+test_isolate.cpython-38.pyc            test_wiener.cpython-38.pyc
+test_link_prediction.cpython-38.pyc
+hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$ cat SECRET
 Great sleuthing!
 The next clue is in: /usr/share/X11/xkb/symbols
 
 The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$ccd /usr/share/X11/xkb/symbols
-hacker@commands~an-epic-filesystem-quest:/usr/share/X11/xkb/symbols$ ls -a
+```
+`hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/networkx/algorithms/tests/__pycache__$ cd /usr/share/X11/xkb/symbols`
+`hacker@commands~an-epic-filesystem-quest:/usr/share/X11/xkb/symbols$ ls -a`
+```
 .       br            dk            gn          jp      lv              nl          sgi_vndr    trans
 ..      brai          dz            gr          jv      ma              no          sharp_vndr  tw
 .BRIEF  bt            ee            group       ke      macintosh_vndr  nokia_vndr  shift       typo
@@ -110,8 +124,10 @@ bg      digital_vndr  gh            jolla_vndr  lt      ng              se      
 hacker@commands~an-epic-filesystem-quest:/usr/share/X11/xkb/symbols$ cat .BRIEF
 Congratulations, you found the clue!
 The next clue is in: /usr/lib/python3/dist-packages/sympy/integrals/__pycache__
-hacker@commands~an-epic-filesystem-quest:/usr/share/X11/xkb/symbols$ cd /usr/lib/python3/dist-packages/sympy/integrals/__pycache__
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/sympy/integrals/__pycache__$ ls -a
+```
+`hacker@commands~an-epic-filesystem-quest:/usr/share/X11/xkb/symbols$ cd /usr/lib/python3/dist-packages/sympy/integrals/__pycache__`
+`hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/sympy/integrals/__pycache__$ ls -a`
+```
 .                              intpoly.cpython-38.pyc          rde.cpython-38.pyc
 ..                             manualintegrate.cpython-38.pyc  risch.cpython-38.pyc
 TRACE                          meijerint.cpython-38.pyc        singularityfunctions.cpython-38.pyc
@@ -124,17 +140,60 @@ Congratulations, you found the clue!
 The next clue is in: /opt/linux/linux-5.4/include/config/no
 
 The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/sympy/integrals/__pycache__$ cd /opt/linux/linux-5.4/include/config/no
-hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ ls -a
+```
+`hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/sympy/integrals/__pycache__$ cd /opt/linux/linux-5.4/include/config/no`
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ ls -a`
+```
 .  ..  .NOTE  hz  hz.h
 hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ cat .NOTE
 Tubular find!
 The next clue is in: /usr/lib/emacsen-common/packages
 
 Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!
+hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ /usr/lib/emacsen-common/packages
+ssh-entrypoint: /usr/lib/emacsen-common/packages: Is a directory
 hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ ls /usr/lib/emacsen-common/packages
 POINTER-TRAPPED  compat  install  remove
-##Section 10:Making directories
+```
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ cat POINTER-TRAPPED`
+```
+cat: POINTER-TRAPPED: No such file or directory
+```
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ cat /usr/lib/emacsen-common/packages/POINTER-TRAPPED`
+```
+Great sleuthing!
+The next clue is in: /opt/linux/linux-5.4/tools/perf/pmu-events/arch/x86/westmereep-dp
+```
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/include/config/no$ cd /opt/linux/linux-5.4/tools/perf/pmu-events/arch/x86/westmereep-dp`
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/tools/perf/pmu-events/arch/x86/westmereep-dp$ ls -
+a`
+```
+.   GIST        floating-point.json  memory.json  pipeline.json
+..  cache.json  frontend.json        other.json   virtual-memory.json
+hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/tools/perf/pmu-events/arch/x86/westmereep-dp$ cat
+GIST
+Great sleuthing!
+The next clue is in: /usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/Asana-Math/Size2
+
+The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.
+```
+`hacker@commands~an-epic-filesystem-quest:/opt/linux/linux-5.4/tools/perf/pmu-events/arch/x86/westmereep-dp$ cd /usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/Asana-Math/Size2`
+`hacker@commands~an-epic-filesystem-quest:/usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/Asana-Math/Size2$ ls -a`
+```
+.  ..  LEAD  Regular
+hacker@commands~an-epic-filesystem-quest:/usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/Asana-Math/Size2$ cat LEAD
+Yahaha, you found me!
+The next clue is in: /opt/ghidra/Ghidra/Processors/MC6800/data/manuals
+```
+`hacker@commands~an-epic-filesystem-quest:/usr/share/javascript/mathjax/unpacked/jax/output/HTML-CSS/fonts/Asana-Math/Size2$ cd /opt/ghidra/Ghidra/Processors/MC6800/data/manuals`
+`hacker@commands~an-epic-filesystem-quest:/opt/ghidra/Ghidra/Processors/MC6800/data/manuals$ ls -a`
+```
+.  ..  6809.idx  WHISPER
+hacker@commands~an-epic-filesystem-quest:/opt/ghidra/Ghidra/Processors/MC6800/data/manuals$ cat WHISPER
+CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!
+It is: pwn.college{UNopwB1UMXY-vfibugn9JonvIXY.dljM4QDL4EDO0czW}
+```
+## Section 10:Making directories
 `hacker@commands~making-directories:~$ mkdir /tmp/pwn`
 <br/>
 `hacker@commands~making-directories:~$ cd /tmp/pwn`
