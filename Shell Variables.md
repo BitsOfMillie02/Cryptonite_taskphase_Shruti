@@ -11,7 +11,7 @@ By prepending a variable name with $, we can print out value stored in a variabl
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{YWjx55xylpD7nvdoSC6W4e-5m1X.dlTN1QDL4EDO0czW}
 ```
-An = sign is used to assign a value to write to a variable. There shouldn't be spaces around the = symbol as the shell doesnt recognise the variable assignment. In this problem, I gave the PWN variable the value of COLLEGE.
+An = sign is used to assign a value to write to a variable. There shouldn't be spaces around the = symbol as the shell doesnt recognise the variable assignment. In this challenge, I gave the PWN variable the value of COLLEGE.
 <br/>
 ## Section 3: Multi-word Variables
 `hacker@variables~multi-word-variables:~$ PWN="COLLEGE YEAH"`
@@ -40,6 +40,8 @@ pwn.college{09jwb83C2sLHu_uXsTVfzG-7igd.dJjN1QDL4EDO0czW}
 You've set the PWN variable to the proper value!
 You've set the COLLEGE variable to the proper value!
 ```
+By default, the variables that we set in a shell session are local to that shell process. When we export the variables, they are passed into the environment variables of child processes. In this challenge, I exported the PWN variable and set it's value to COLLEGE, and the set the COLLEGE variable to the value of PWN but did not export it.
+<br/>
 ## Section 5:Printing Exported Variables
 `hacker@variables~printing-exported-variables:~$ env`
 ```
@@ -59,6 +61,8 @@ LC_CTYPE=C.UTF-8
 PATH=/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 _=/run/workspace/bin/env
 ```
+In this challenge, I used the env command to print out every exported variable set in the shell.
+<br/>
 ## Section 6: Storing Command Output   
 `hacker@variables~storing-command-output:~$ PWN=$(/challenge/run)`
 ```
@@ -69,6 +73,8 @@ and submit it!
 ```
 pwn.college{sfzqrkYhvM1dFXGTttIqdRCSqMa.dVzN0UDL4EDO0czW}
 ```
+Command Substitution is the process by which we can store the output of some command into a variable. In this challenge, I stored the output of the /challenge/run command into a variable called PWN.
+<br/>
 ## Section 7: Reading Input
 `hacker@variables~reading-input:~$ read PWN`
 ```
@@ -76,12 +82,14 @@ COLLEGE
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{Ylp85JLqSOHWDi2tnstF7xppNX3.dhzN1QDL4EDO0czW}
 ```
+read command is used to take input from the user or reads data from the standard inpuut. The -p argument lets us specify a prompt. In this challenge, I used the read command to set the PWN variable to the value COLLEGE.
+<br/>
 ## Section 8 : Reading Files
 `hacker@variables~reading-files:~$ read PWN < /challenge/read_me`
 ```
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{EBv_u7N5nSfXWFhGQJYqyG8DmBH.dBjM4QDL4EDO0czW}
 ```
-
-
+In this challenge, I directly used read command to read /challenge/read_me into the PWN variable.
+<br/>
 
