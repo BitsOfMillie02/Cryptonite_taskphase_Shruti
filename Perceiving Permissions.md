@@ -76,6 +76,10 @@ The first character is the file type. The next nine characters are the actual ac
 Successful execution! Here is your flag:
 pwn.college{8FRA5OLxfAQ34gEYffA_RKj6Pm5.dJTM2QDL4EDO0czW}
 ```
+Linux only executes the program ther is an execute-access to the program file. If the permissiona are removed, the execution fails.
+<br/>
+In this challenge, I made the chmod command and made it executable to print the flag.
+<br/>
 ## Section 6: Permission Tweaking Practise
 ```
 Commands:
@@ -581,6 +585,14 @@ Current permissions of "/flag": ---------
 ```
 pwn.college{YAZe4F4QnMGNQcC6tJiHVh5jhjy.dNTM5QDL4EDO0czW}
 ```
+chmod command can also overwrite the old permissions using an = symbol instead of a + or - symbol.
+<br/>
+u=rw sets read and write permissions for the user, and wipes the execute permission
+<br/>
+o=x sets only executable permissions, wiping read and write
+<br/>
+a=rwx sets read, write, and executable permissions for the user and group.
+<br/>
 ## Section 8: The SUID Bit
 `hacker@permissions~the-suid-bit:~$ chmod u+s /challenge/getroot`
 `hacker@permissions~the-suid-bit:~$ /challenge/getroot`
@@ -590,5 +602,5 @@ Here is your shell...
 root@permissions~the-suid-bit:~# cat /flag
 pwn.college{0ndAoFIwrJwDFuGtcm6-VR4it-g.dNTM2QDL4EDO0czW}
 ```
-
-
+The "Set User ID" (SUID) permissions bit allows the user to run a program as the owner of that program's file
+The s signifies that the program is executable with SUID. The program will execute as the owner user regardless of what user runs the program. 
