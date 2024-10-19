@@ -28,6 +28,7 @@ hacker        75       0  0 12:48 pts/0    00:00:00 /run/dojo/bin/ssh-entrypoint
 hacker        92      75  0 12:48 pts/0    00:00:00 ps -ef
 ```
 `hacker@processes~killing-processes:~$ kill 73`
+<br/>
 `hacker@processes~killing-processes:~$ /challenge/run`
 ```
 Great job! Here is your payment:
