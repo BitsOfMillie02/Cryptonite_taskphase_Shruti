@@ -7,6 +7,8 @@ Password: where password is hack-the-planet
 ```
 pwn.college{wcPTsqNhaPN_lB7I-akJfqjXGPX.dVTN0UDL4EDO0czW}
 ```
+The su command in Linux is used to switch in the terminal only after verifying if the user knows the password. In this challenge, I used the su command to change the root by providing it with a passowrd to get the flag.
+<br/>
 ## Section 2: Other Users With SU
 `hacker@users~other-users-with-su:~$ su zardus`
 ```
@@ -17,6 +19,8 @@ Password: where the password is dont-hack-me
 Congratulations, you have become Zardus! Here is your flag:
 pwn.college{wBH5XRv88qo7f0-iXNJ3CteTbjV.dZTN0UDL4EDO0czW}
 ```
+In this challenge, I switched to zardus user, verified with a password and then ran /challenge/run to get the flag.
+<br/>
 ## Section 3: Cracking Passwords
 `hacker@users~cracking-passwords:~$ john /challenge/shadow-leak`
 ```
@@ -41,3 +45,5 @@ pwn.college{MnfdsuHihsOFjj-tkJxopE9w1PO.ddTN0UDL4EDO0czW}
 ```
 pwn.college{4zA3lBO_8AZogQ6knHMk5UtUSoa.dhTN0UDL4EDO0czW}
 ```
+Unlike su, the sudo command defaults to running a command as root and uses policies to check whether the user's authentication instead of verifying through password.
+<br/>
