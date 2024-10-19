@@ -11,12 +11,16 @@ By prepending a variable name with $, we can print out value stored in a variabl
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{YWjx55xylpD7nvdoSC6W4e-5m1X.dlTN1QDL4EDO0czW}
 ```
+An = sign is used to assign a value to write to a variable. There shouldn't be spaces around the = symbol as the shell doesnt recognise the variable assignment. In this problem, I gave the PWN variable the value of COLLEGE.
+<br/>
 ## Section 3: Multi-word Variables
 `hacker@variables~multi-word-variables:~$ PWN="COLLEGE YEAH"`
 ```
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{g_GsrI-ZwNZV-sMrYpx3GwvHD2M.dBjN1QDL4EDO0czW}
 ```
+Spaces can be used arbitarily in the shell. Thus to set the value to more than one word we must use quotes which makes the shell consider it as a single token.
+<br/>
 ## Section 4: Exporting Variables
 `hacker@variables~exporting-variables:~$ export PWN=COLLEGE`
 ```
