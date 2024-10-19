@@ -197,6 +197,8 @@ overlap weirdly with the shell prompt, but you're used to that by now...
 Anyways! Here is your flag!
 pwn.college{4kPFKsoL_bQf-OOcd8Hsvy730C1.dlDN4QDL4EDO0czW}
 ```
+To directly start the backgrounding we can append an & to the command.
+<br/>
 ## Section 9: Process Exit Codes
 `hacker@processes~process-exit-codes:~$ /challenge/get-code`
 ```
@@ -211,6 +213,9 @@ Exiting with an error code!
 CORRECT! Here is your flag:
 pwn.college{capuSrpozYnNv0-bj4l7r0x4zmG.dljN4UDL4EDO0czW}
 ```
+Every shell command like programs each exit with an exit code when they finish running or terminate which is used to check if the process succeeded in its functionality. A ? variable is used to access the exit code of the most recently termianted command. Commands that succeed return 0 and commands that fail return a non-zero value most commonly 1.
+<br/>
+
 
 
 
