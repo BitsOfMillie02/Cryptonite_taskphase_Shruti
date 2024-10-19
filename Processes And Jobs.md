@@ -15,6 +15,12 @@ Yahaha, you found me! Here is your flag:
 pwn.college{4_FSwW13rcgIgbTke_5Ts2edko7.dhzM4QDL4EDO0czW}
 Now I will sleep for a while (so that you could find me with 'ps').
 ```
+ps stands for "process snapshot" or "process status" and it lists the processes running in terminal. Each process has a number that uniquely identifies every running process in a Linux environment known as the numerical identifier (the Process ID, or PID).
+<br/>
+Standard Syntax: -e to list every process and -f for full format output, including arguments which can be combined into a single argument -ef.
+<br/>
+BSD Syntax:  a to list processes for all users, x to list processes that aren't running in the terminal, and u for a "user-readable" output which can be combined into a single argument aux.
+<br/>
 ## Section 2: Killing Processes
 `hacker@processes~killing-processes:~$ ps -ef`
 ```
@@ -34,6 +40,8 @@ hacker        92      75  0 12:48 pts/0    00:00:00 ps -ef
 Great job! Here is your payment:
 pwn.college{w-G_yTHW_bfytdx97Ch6jopVC9y.dJDN4QDL4EDO0czW}
 ```
+To terminate processes we use the kill command in such a way that gives it a chance to get its affairs in order before ceasing to exist. In this challenge, I first terminated the the first process and then ran it. I used the kill command to terminate the dont_run process.
+<br/>
 ## Section 3: Interrupting Processes
 `hacker@processes~interrupting-processes:~$ /challenge/run`
 ```
@@ -43,6 +51,8 @@ you can force me to exit with Ctrl-C. Try it now!
 Good job! You have used Ctrl-C to interrupt this process! Here is your flag:
 pwn.college{I95GflmYMx-xo3tCqfkDB3Yq4Pi.dNDN4QDL4EDO0czW}
 ```
+Ctrl-C sends an "interrupt" instruction to the application which is waiting on input from the terminal and causes the application to exit or interrupt. In this challenge, I used Ctrl-C to interrupt the process to get the command.
+<br/>
 ## Section 4: Suspending Processes
 `hacker@processes~suspending-processes:~$ /challenge/run`
 ```
@@ -74,6 +84,8 @@ root          91      89  0 12:52 pts/0    00:00:00 ps -f
 Yay, I found another version of me! Here is the flag:
 pwn.college{YJjvLaDSC8Shc1wBtk1gQyU2swf.dVDN4QDL4EDO0czW}
 ```
+Ctrl-Z is used to suspend processes to the background. In this challenge, I launched another copy of run on itself on the same terminal by first launching it, suspending it using Ctrl-Z and then launching it again to get the flag.
+<br/>
 ## Section 5: Resuming Processes
 `hacker@processes~resuming-processes:~$ /challenge/run`
 ```
@@ -88,6 +100,8 @@ the 'fg' command! Or just press Enter to quit me!
 I'm back! Here's your flag:
 pwn.college{UMOx4QJbiwJ1JF5_HMdNf2pzVS2.dZDN4QDL4EDO0czW}
 ```
+The fg command is a builtin command that resumes the suspended process and puts it back in the foreground of the terminal. In this challenge, I first suspended the process and then resumed it using the fg command.
+<br/>
 ## Section 6: Backgrounding Processes
 `hacker@processes~backgrounding-processes:~$ /challenge/run`
 ```
