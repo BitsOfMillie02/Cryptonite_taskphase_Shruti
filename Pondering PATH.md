@@ -1,5 +1,6 @@
 ## Section 1: The PATH Variable
 `hacker@path~the-path-variable:~$ PATH=""`
+<br/>
 `hacker@path~the-path-variable:~$ /challenge/run`
 ```
 Trying to remove /flag...
@@ -13,6 +14,7 @@ pwn.college{AcTg3arnznG_QpbBROo1ktykuCe.dZzNwUDL4EDO0czW}
 win
 ```
 `hacker@path~setting-path:~$ PATH=/challenge/more_commands/`
+<br/>
 `hacker@path~setting-path:~$ /challenge/run`
 ```
 Invoking 'win'....
