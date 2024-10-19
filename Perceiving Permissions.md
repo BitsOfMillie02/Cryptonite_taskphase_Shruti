@@ -18,6 +18,14 @@ lrwxrwxrwx 1 hacker hacker  25 Oct  6 13:06 not-the-flag -> /home/hacker/not-the
 ```
 pwn.college{wPA5NtkNf5l0YARKq4oz1tKYDzM.dFTM2QDL4EDO0czW}
 ```
+Every file in Linux is owned by a user on the system. The two important user accounts are:
+<br/>
+Your user account. On pwn.college, the hacker user.
+<br/>
+root which is the administrative account.
+<br/>
+We can change the ownership of files via the chown (change owner) command.
+<br/>
 ## Section 2: Groups And Files
 `hacker@permissions~groups-and-files:~$ chgrp hacker /flag`
 <br/>
@@ -25,6 +33,10 @@ pwn.college{wPA5NtkNf5l0YARKq4oz1tKYDzM.dFTM2QDL4EDO0czW}
 ```
 pwn.college{Ixopmqi1kfVzcwKoSTBJ929fV9A.dFzNyUDL4EDO0czW}
 ```
+Files have an owner user and a group. A group can have multiple users in it and a user can be a member of multiple groups. The group ownership can be changed with the chgrp - change group command.
+<br/>
+In this challenge, I invoked the chgrp command to change ownership and read out the flag using cat command.
+<br/>
 ## Section 3: Fun With Groups Names
 `hacker@permissions~fun-with-groups-names:~$ id`
 ```
@@ -49,6 +61,9 @@ pwn.college{kReBYEvfwgNsH5vTkpkDyBHqw19.dJzNyUDL4EDO0czW}
 ```
 pwn.college{4HSGod_AgWjcVk5_bDUHpSAG3-y.dNzNyUDL4EDO0czW}
 ```
+The first character is the file type. The next nine characters are the actual access permissions of the file or directory, split into 3 characters denoting permissions for the owning user, 3 characters denoting the permissions for the owning group, and 3 characters denoting the permissions that all other access.
+<br/>
+
 ## Section 5: Executable Files
 `hacker@permissions~executable-files:~$ ls -l /challenge/run`
 ```
