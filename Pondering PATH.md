@@ -8,6 +8,9 @@ Trying to remove /flag...
 The flag is still there! I might as well give it to you!
 pwn.college{AcTg3arnznG_QpbBROo1ktykuCe.dZzNwUDL4EDO0czW}
 ```
+ A special shell variable known as PATH stores a bunch of directory paths in which the shell searches for programs.
+ corresponding to commands.
+ <br/>
 ## Section 2: Setting PATH
 `hacker@path~setting-path:~$ ls /challenge/more_commands/`
 ```
