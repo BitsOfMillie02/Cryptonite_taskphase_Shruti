@@ -3,6 +3,8 @@
 ```
 pwn.college{MRECcQPMrvAwW6jDMVJudkCGxTl.ddTN1QDL4EDO0czW}
 ```
+By prepending a variable name with $, we can print out value stored in a variable with the help of echo command.
+<br/>
 ## Section 2: Setting Variables
 `hacker@variables~setting-variables:~$ PWN=COLLEGE`
 ```
