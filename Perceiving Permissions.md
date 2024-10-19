@@ -1,5 +1,6 @@
 ## Section 1: Changing File Ownership
 `hacker@permissions~changing-file-ownership:~$ chown hacker /flag`
+<br/>
 `hacker@permissions~changing-file-ownership:~$ ls -l`
 ```
 total 28
@@ -19,6 +20,7 @@ pwn.college{wPA5NtkNf5l0YARKq4oz1tKYDzM.dFTM2QDL4EDO0czW}
 ```
 ## Section 2: Groups And Files
 `hacker@permissions~groups-and-files:~$ chgrp hacker /flag`
+<br/>
 `hacker@permissions~groups-and-files:~$ cat /flag`
 ```
 pwn.college{Ixopmqi1kfVzcwKoSTBJ929fV9A.dFzNyUDL4EDO0czW}
@@ -29,17 +31,20 @@ pwn.college{Ixopmqi1kfVzcwKoSTBJ929fV9A.dFzNyUDL4EDO0czW}
 uid=1000(hacker) gid=1000(grp26362) groups=1000(grp26362)
 ```
 `hacker@permissions~fun-with-groups-names:~$ chgrp grp26362 /flag`
+<br/>
 `hacker@permissions~fun-with-groups-names:~$ cat /flag`
 ```
 pwn.college{kReBYEvfwgNsH5vTkpkDyBHqw19.dJzNyUDL4EDO0czW}
 ```
 ## Section 4: Changing Permissions
 `hacker@permissions~changing-permissions:~$ ^C`
+<br/>
 `hacker@permissions~changing-permissions:~$ ls -l /flag`
 ```
 -r-------- 1 root root 58 Oct 18 13:11 /flag
 ```
 `hacker@permissions~changing-permissions:~$ chmod a+r /flag`
+<br/>
 `hacker@permissions~changing-permissions:~$ cat /flag`
 ```
 pwn.college{4HSGod_AgWjcVk5_bDUHpSAG3-y.dNzNyUDL4EDO0czW}
@@ -50,6 +55,7 @@ pwn.college{4HSGod_AgWjcVk5_bDUHpSAG3-y.dNzNyUDL4EDO0czW}
 -r--r--r-- 1 hacker hacker 32 Jul  4 06:37 /challenge/run
 ```
 `hacker@permissions~executable-files:~$ chmod a+x /challenge/run`
+<br/>
 `hacker@permissions~executable-files:~$ /challenge/run`
 ```
 Successful execution! Here is your flag:
@@ -148,7 +154,9 @@ Needed permissions of "/challenge/pwn": --xr--r-x
 * the world does have read permissions
 - the world doesn't have write permissions
 * the world does have execute permissions
-hacker@permissions~permission-tweaking-practice:~$ chmod u-r /challenge/pwn
+```
+`hacker@permissions~permission-tweaking-practice:~$ chmod u-r /challenge/pwn`
+```
 You set the correct permissions!
 Round 3 (of 8)!
 
@@ -301,6 +309,7 @@ Current permissions of "/flag": ---------
 - the world doesn't have execute permissions
 ```
 `hacker@permissions~permission-tweaking-practice:~$ chmod u+r /flag`
+<br/>
 `hacker@permissions~permission-tweaking-practice:~$ cat /flag`
 ```
 pwn.college{0XNE4MienKRBlmBFLzOEd1lFVZX.dBTM2QDL4EDO0czW}
@@ -552,6 +561,7 @@ Current permissions of "/flag": ---------
 - the world doesn't have execute permissions
 ```
 `hacker@permissions~permissions-setting-practice:~$ chmod u+r /flag`
+<br/>
 `hacker@permissions~permissions-setting-practice:~$ cat /flag`
 ```
 pwn.college{YAZe4F4QnMGNQcC6tJiHVh5jhjy.dNTM5QDL4EDO0czW}
